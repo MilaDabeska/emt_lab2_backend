@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab</title>
+</head>
+<body>
+<div class="table-responsive" xmlns:th="http://www.thymeleaf.org">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Category name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="category : ${books}" class="category">
+            <td th:text="${category.getName()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
